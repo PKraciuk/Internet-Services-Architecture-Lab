@@ -1,0 +1,58 @@
+GET http://localhost:8080/api/players
+
+###
+GET http://localhost:8080/api/clubs
+###
+GET http://localhost:8080/api/players/1
+###
+GET http://localhost:8080/api/clubs/FC Warszawa
+###
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{
+  "name": "MAREK KOWALSKI",
+  "position": "Striker",
+  "age": 18,
+  "height": 166,
+  "value": 120000,
+  "club": "FC Warszawa"
+}
+###
+POST http://localhost:8080/api/clubs
+Content-Type: application/json
+
+{
+  "name": "COCO JUMBO WARSZAWA",
+  "CreationYear": 1919,
+  "MainColor": "Pink",
+  "Budget": 166000
+}
+###
+PUT http://localhost:8080/api/players/2
+Content-Type: application/json
+
+{
+  "name": "TEST UPDATE",
+  "value": "12",
+  "age": 30
+}
+
+###
+PUT http://localhost:8080/api/clubs/FC Warszawa
+Content-Type: application/json
+
+{
+  "mainColor": "TEST UPDATE"
+}
+
+###
+GET http://localhost:8080/api/clubs/Gornik Gdansk/players
+###
+GET http://localhost:8080/api/clubs/Gornik Gdansk/players/2
+
+###
+DELETE http://localhost:8080/api/clubs/COCO JUMBO WARSZAWA
+
+###
+DELETE http://localhost:8080/api/players/1
