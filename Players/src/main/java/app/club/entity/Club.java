@@ -1,9 +1,12 @@
 package app.club.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import app.player.entity.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -34,4 +37,9 @@ public class Club {
     public Double getBudget() {
         return Budget;
     }
+
+    @OneToMany(mappedBy = "club", fetch =  FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<Player> players;
+
 }

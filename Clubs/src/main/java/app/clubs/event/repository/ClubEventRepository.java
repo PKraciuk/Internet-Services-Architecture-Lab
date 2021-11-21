@@ -14,12 +14,12 @@ public class ClubEventRepository {
     private RestTemplate restTemplate;
 
     @Autowired
-    public ClubEventRepository(@Value("${lab.clubs.url}") String baseUrl) {
+    public ClubEventRepository(@Value("${lab.players.url}") String baseUrl) {
         restTemplate = new RestTemplateBuilder().rootUri(baseUrl).build();
     }
 
-    public void delete(Club club) {
-        restTemplate.delete("/clubs/{name}", club.getName());
+    public void delete(String name) {
+        restTemplate.delete("/clubs/{name}", name);
     }
 
     public void create(Club club) {

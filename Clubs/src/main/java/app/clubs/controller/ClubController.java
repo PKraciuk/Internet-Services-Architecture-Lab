@@ -64,7 +64,8 @@ public class ClubController {
     public ResponseEntity<Void> deleteClub(@PathVariable("name") String name) {
         Optional<Club> club = clubService.find(name);
         if (club.isPresent()) {
-            clubService.deleteClub(name);
+            app.clubs.event.repository.ClubEventRepository clubEventRepository = new app.clubs.event.repository.ClubEventRepository("http://localhost:8082/api/");
+            clubEventRepository.delete(name);
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.notFound().build();

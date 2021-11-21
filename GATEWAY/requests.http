@@ -52,7 +52,7 @@ GET http://localhost:8080/api/clubs/Gornik Gdansk/players
 GET http://localhost:8080/api/clubs/Gornik Gdansk/players/2
 
 ###
-DELETE http://localhost:8080/api/clubs/COCO JUMBO WARSZAWA
+DELETE http://localhost:8080/api/clubs/FC Warszawa
 
 ###
 DELETE http://localhost:8080/api/players/1
