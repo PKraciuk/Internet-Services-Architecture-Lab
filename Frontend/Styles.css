@@ -1,0 +1,129 @@
+body {
+    background-color: #0e89b9;
+    font-family: Georgia serif;
+}
+
+.container {
+    margin: 50px auto;
+    width: 1000px;
+}
+
+.header {
+    text-align: right;
+    background: #000405;
+    color: #f1f1f1;
+    font-weight: bold;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 10px;
+    font-style: italic;
+}
+
+.navigation-bar {
+    background-color: #5ad36a;
+}
+.MainText {
+    font-size: 60px;
+    text-align: center;
+}
+.navigation-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navigation-bar li {
+    float: left;
+}
+
+.navigation-bar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigation-bar a:hover {
+    background-color: #111;
+}
+
+.main-section {
+    padding: 10px;
+    background-color: #E0EEF7;
+}
+
+.footer {
+    font-size: small;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.text--justified {
+    text-align: justify;
+}
+
+.text--italic {
+    font-style: italic;
+}
+
+.text--bold {
+    font-weight: bold;
+}
+
+.ui-control {
+    border-color: #214753;
+    background-color: #E0EEF7;
+    border-width: 1px;
+    padding: 1px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+.ui-control:focus {
+    outline: none;
+}
+
+.ui-button {
+    height: 24px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.ui-input {
+    height: 20px;
+}
+
+.ui-textarea {
+
+}
+
+.hidden {
+    display: none;
+}
+
+.data-table {
+    border-collapse: collapse;
+}
+
+.data-table td, .data-table th {
+    padding: 6px;
+}
+
+.data-table thead {
+    font-weight: bold;
+    background-color: #548BA1;
+    color: #214753;
+}
+
+.data-table tbody tr:hover {
+    background-color: #17b8c4;
+}
+
