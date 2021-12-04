@@ -44,6 +44,9 @@ public class ClubController {
                 .dtoToEntityMapper()
                 .apply(request);
         club = clubService.create(club);
+        app.clubs.event.repository.ClubEventRepository clubEventRepository = new app.clubs.event.repository.ClubEventRepository("http://localhost:8082/api/");
+        clubEventRepository.create(club);
+
         return ResponseEntity.created(builder.pathSegment("api", "characters", "{id}")
                 .buildAndExpand(club.getName()).toUri()).build();
 
@@ -66,6 +69,7 @@ public class ClubController {
         if (club.isPresent()) {
             app.clubs.event.repository.ClubEventRepository clubEventRepository = new app.clubs.event.repository.ClubEventRepository("http://localhost:8082/api/");
             clubEventRepository.delete(name);
+            clubService.deleteClub(name);
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.notFound().build();

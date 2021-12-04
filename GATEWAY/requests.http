@@ -5,7 +5,7 @@ GET http://localhost:8080/api/clubs
 ###
 GET http://localhost:8080/api/players/1
 ###
-GET http://localhost:8080/api/clubs/FC Warszawa
+GET http://localhost:8080/api/clubs/Gornik Gdansk
 ###
 POST http://localhost:8080/api/players
 Content-Type: application/json
